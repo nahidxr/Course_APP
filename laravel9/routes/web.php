@@ -22,14 +22,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+//courses
 Route::get('/course', [CourseController::class, 'index']);
-
 Route::get('/course/create', [CourseController::class, 'create']);
-
 Route::post('/course/store', [CourseController::class, 'store']);
-
 Route::get('/course/{id}/edit', [CourseController::class, 'edit']);
-
 Route::put('/course/{id}', [CourseController::class, 'update']);
 Route::delete('/course/{id}', [CourseController::class, 'destroy']);
 
