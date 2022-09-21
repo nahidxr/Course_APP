@@ -39,7 +39,7 @@ class CourseController extends Controller
     {
 
         $data["course"] =Course::find($id);
-        return view("categories.edit", $data);
+        return view("course.edit", $data);
     }
 
 

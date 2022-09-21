@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('contents')
-<h3>Hell0 !!!</h3>
+<h3>Hello !!!</h3>
 
 
 

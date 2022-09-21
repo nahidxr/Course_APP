@@ -16,7 +16,7 @@
         <td>{{ $item->description }}</td>
         <td>
             <a href="{{ url("/course/$item->id/edit") }}" class="btn btn-warning bt-sm">Update</a>
-            {{-- <a href="" class="btn btn-danger btn-sm">Delete</a> --}}
+           
             <form action="{{ url("/course/$item->id") }}" method="POST"
                 onsubmit="return confirm('Do you really want to Delete the value?');">
                 @csrf
