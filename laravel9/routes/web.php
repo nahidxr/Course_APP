@@ -33,5 +33,4 @@ Route::delete('/course/{id}', [CourseController::class, 'destroy']);
 
 
 
-
 require __DIR__.'/auth.php';
