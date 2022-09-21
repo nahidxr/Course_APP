@@ -15,19 +15,15 @@
         <td>{{ $item->name }}</td>
         <td>{{ $item->description }}</td>
         <td>
-            <a href="{{ url("/course/$item->id/edit") }}" class="btn btn-warning bt-sm">Update</a>
-           
-            <form action="{{ url("/course/$item->id") }}" method="POST"
-                onsubmit="return confirm('Do you really want to Delete the value?');">
+            <form action="{{ url("/course/$item->id") }}" method="POST" onsubmit="return confirm('Do you really want to Delete the value?');">
                 @csrf
                 @method('delete')
+                <a href="{{ url("/course/$item->id/edit") }}" class="btn btn-warning bt-sm">Update</a>
                 <input type="submit" value="Delete" class="btn btn-danger bt-sm">
             </form>
         </td>
     </tr>
     @endforeach
-
-
 </table>
 
 
