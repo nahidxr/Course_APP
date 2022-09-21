@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
       <label>Description</label>
-      <input type="text" class="form-control"  name="course_description" value={{old('course_description')}}  >
+      <textarea class="form-control"  name="course_description" value={{old('course_description')}} ></textarea>
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
