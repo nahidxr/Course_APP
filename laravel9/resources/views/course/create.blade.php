@@ -12,6 +12,10 @@
       <label>Description</label>
       <textarea class="form-control"  name="course_description" value={{old('course_description')}} ></textarea>
     </div>
+    <div class="form-group">
+        <label>Fee</label>
+        <input type="text" class="form-control"  name="course_fee"  value={{old('course_fee')}}   >
+      </div>
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 @if ($errors->any())
