@@ -44,28 +44,27 @@ class TopicController extends Controller
     public function edit($id)
     {
 
-        $data["course"] =Course::find($id);
-        return view("course.edit", $data);
+        $data["topic"] =Topic::find($id);
+        return view("topic.edit", $data);
     }
 
 
     public function update(Request $request)
     {
+        $topic = new Topic();
+        $topic->name = $request->topic_name;
+        $topic->course_id = $request->course_id;
+        $topic->save();
 
-        $course = new Course();
-        $course->name = $request->course_name;
-        $course->description = $request->course_description;
-        $course->fee = $request->course_fee;
-        $course->save();
 
-        return redirect('/course');
+        return redirect('/topics');
     }
 
     public function destroy($id)
     {
 
-        $course=Course::find($id);
-        $course->delete();
-        return redirect("/course");
+        $topic=Topic::find($id);
+        $topic->delete();
+        return redirect("/topics");
     }
 }
