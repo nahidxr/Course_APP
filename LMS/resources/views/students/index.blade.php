@@ -17,7 +17,7 @@
         <td>{{ $item->name }}</td>
         <td>{{ $item->email }}</td>
         <td>{{ $item->phone }}</td>
-        <td>{{ $item->CourseName }}</td>
+        <td>{{ $item->course_name }}</td>
         <td>
             <form action="{{ url("/students/$item->id") }}" method="POST" onsubmit="return confirm('Do you really want to Delete the value?');">
                 @csrf

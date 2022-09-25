@@ -11,14 +11,13 @@ class StudentController extends Controller
 
     public function index(){
 
-        $allStudent=Student::select("students.id","students.name","students.email","students.phone","courses.name as course_name " )
+        $allStudent=Student::select("students.id","students.name","students.email","students.phone","courses.name as course_name" )
                             ->join("courses", "courses.id","=","students.course_id")
                             ->get();
 
 
         // foreach($allStudent as $item){
-
-        //     dd($item->id);
+        //     dd($item->course_name);
         // }
         return view('students.index',compact('allStudent'));
 

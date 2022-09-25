@@ -13,12 +13,12 @@ class TopicController extends Controller
     public function index()
     {
 
-        $data["topic_list"]=Topic::select("topics.id","topics.name","courses.name as course_name " )
+        $allTopic=Topic::select("topics.id","topics.name","courses.name as course_name" )
         ->join("courses", "courses.id","=","topics.course_id")
         ->get();
 
         // $data['topic_list'] = Topic::get();
-        return view('topic.index', $data);
+        return view('topic.index', compact('allTopic'));
     }
 
 

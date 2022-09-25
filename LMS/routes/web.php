@@ -43,11 +43,11 @@ Route::delete('/students/{id}', [StudentController::class, 'destroy']);
 //Topics
 
 Route::get('/topics', [TopicController::class, 'index']);
- Route::get('/topics/create', [TopicController::class, 'create']);
-  Route::post('/topics/store', [TopicController::class, 'store']);
+Route::get('/topics/create', [TopicController::class, 'create']);
+Route::post('/topics/store', [TopicController::class, 'store']);
 // Route::get('/topics/{id}/edit', [TopicController::class, 'edit']);
 // Route::put('/topics/{id}', [TopicController::class, 'update']);
-// Route::delete('/topics/{id}', [TopicController::class, 'destroy']);
+Route::delete('/topics/{id}', [TopicController::class, 'destroy']);
 
 
 
